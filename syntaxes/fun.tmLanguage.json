@@ -1,0 +1,94 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "fun",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#classes"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.other.fun",
+					"match": "\\b(and|or|true|false)\\b"
+				},
+				{
+					"name": "keyword.control.fun",
+					"match": "\\b(if|else|loop|set|type|wait|to|frames|times|let|be|make|every|after|break|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.fun",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fun",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"comment": "Line Comments -- Asterisk only works at beginning of line",
+			"match": "((#).*$)",
+			"captures": {
+				"1": {
+					"name": "comment.line.fun"
+				}
+			}
+		},
+		"classes": {
+			"patterns": [
+				{
+					"name": "entity.name.type",
+					"match": "([A-Z][a-z]*)"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "((?<!\\w)(0|-?[1-9]+[0-9]*)\\.?[0-9]*)"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.other",
+					"match": "(?<![\\.[a-z]*])([a-z]+[a-z_0-9]*)(?![a-z_0-9]*\\(.*\\))"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "([a-z]+[a-z_0-9]*)(?=\\(.*\\))"
+				}
+			]
+		}
+	},
+	"scopeName": "source.fun"
+}
