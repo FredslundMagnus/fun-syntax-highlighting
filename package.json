@@ -1,11 +1,13 @@
 {
     "name": "fun",
-    "displayName": "fun",
-    "description": "fun",
-    "version": "0.0.2",
+    "displayName": "Funny Language Support",
+    "description": "Soppurt for the Funny programmin language.",
+    "version": "0.1.0",
+    "publisher": "Magnus Fredslund",
+    "icon": "icon.png",
     "repository": {
         "type": "git",
-        "url": "git://github.com/FredslundMagnus/fun-syntax-highlighting.git"
+        "url": "https://github.com/FredslundMagnus/fun-syntax-highlighting.git"
     },
     "engines": {
         "vscode": "^1.64.0"
@@ -16,8 +18,9 @@
     "contributes": {
         "languages": [
             {
-                "id": "fun",
+                "id": "Funny",
                 "aliases": [
+                    "Funny",
                     "fun",
                     "Fun",
                     "Fun-lang"
@@ -30,7 +33,7 @@
         ],
         "grammars": [
             {
-                "language": "fun",
+                "language": "Funny",
                 "scopeName": "source.fun",
                 "path": "./syntaxes/fun.tmLanguage.json"
             }

@@ -29,11 +29,11 @@
 			"patterns": [
 				{
 					"name": "keyword.other.fun",
-					"match": "\\b(and|or|true|false)\\b"
+					"match": "\\b(and|or|True|False)\\b"
 				},
 				{
 					"name": "keyword.control.fun",
-					"match": "\\b(if|else|loop|set|type|wait|to|frames|times|let|be|make|every|after|break|return|do)\\b"
+					"match": "\\b(if|else|loop|set|type|wait|to|frames|times|let|be|make|every|after|break|return|do|await|as)\\b"
 				}
 			]
 		},
