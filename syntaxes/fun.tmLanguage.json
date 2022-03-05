@@ -33,7 +33,7 @@
 				},
 				{
 					"name": "keyword.control.fun",
-					"match": "\\b(if|else|loop|set|type|wait|to|frames|times|let|be|make|every|after|break|return|do|await|as)\\b"
+					"match": "\\b(if|else|loop|set|type|wait|to|frames|times|let|be|make|every|after|break|continue|return|do|await|as)\\b"
 				}
 			]
 		},
